@@ -3,10 +3,11 @@ import ReactDOM from "react-dom";
 import "jquery";
 import "popper.js/dist/umd/popper";
 import "bootstrap/dist/js/bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
 
 
 
-var element = <div>Amiibo-app</div>;
+var element = <button class="btn btn-danger">Amiibo-app</button>;
 ReactDOM.render(element, document.
     getElementById("root"));
 
