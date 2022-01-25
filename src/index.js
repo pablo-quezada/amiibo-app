@@ -8,8 +8,8 @@ import { NavBar } from "./App";
 
 
 
-var element = <button class="btn btn-danger">Amiibo-app</button>;
-ReactDOM.render(element, document.
+
+ReactDOM.render(<NavBar/>, document.
     getElementById("root"));
 
-console.log(element);    
+  
