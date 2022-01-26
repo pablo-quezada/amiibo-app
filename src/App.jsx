@@ -6,7 +6,7 @@ Component
 {
     render()
     {
-        return <div>Mario</div>
+        return <NavBar/>
     }
     
 }
