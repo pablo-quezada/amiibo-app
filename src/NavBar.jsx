@@ -21,7 +21,6 @@ class NavBar extends Component {
                         </div>
                     </div>
                </nav>
-             <MainContent/>
            </React.Fragment>                
         );
     };
