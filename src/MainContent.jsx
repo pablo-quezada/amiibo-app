@@ -12,9 +12,19 @@ extends Component {
                             {this.state.customersCount}
                         </span>
 
-                        <button className="btn btn-info">Refresh</button>
+                        <button className="btn btn-info" onClick={this.onRefreshClick}>
+                            Refresh
+                        </button>
                     </h4>
                 </div>
                );
     }
+
+
+    
+    onRefreshClick() {
+        console.log("Refresh clicked");
+    }
 }
+
+
