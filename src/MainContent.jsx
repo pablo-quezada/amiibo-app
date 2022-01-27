@@ -43,6 +43,12 @@ extends Component {
 
 };
 
+customerNameStyle = (custName) => {
+    if(custName.startsWith("S")) return {backgroundColor: "green"};
+    else if(custName.startsWith("J")) return {backgroundColor: "red"};
+    else return {};
+};
+
     render() {
         return ( <div>
                     <h4 className="m-2 p-2">
@@ -99,11 +105,7 @@ extends Component {
                     <td>
                         <img src={cust.photo} alt="Customer"/>
                     </td>
-                    <td 
-                     style={{backgroundColor:(cust.name.startsWith("S"))?"green":"red",
-                     }}>
-                    {cust.name}
-                    </td>
+                    <td style={this.customerNameStyle(cust.name)}>{cust.name}</td>
                     <td>{this.getPhoneToRender(cust.phone)}</td>
                     <td>{cust.address.city}</td>
                 </tr>
