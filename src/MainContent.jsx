@@ -44,8 +44,8 @@ extends Component {
 };
 
 customerNameStyle = (custName) => {
-    if(custName.startsWith("S")) return {backgroundColor: "green"};
-    else if(custName.startsWith("J")) return {backgroundColor: "red"};
+    if(custName.startsWith("M")) return {backgroundColor: "green"};
+    else if(custName.startsWith("Z")) return {backgroundColor: "red"};
     else return {};
 };
 
