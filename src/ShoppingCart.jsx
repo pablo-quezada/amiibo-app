@@ -21,12 +21,12 @@ export default class ShoppingCart extends Component {
 
             <div className="row">
                 {this.state.products.map((prod) => {
-                    return <Product key={prod.id} product={prod} 
+                    return ( <Product key={prod.id} product={prod} 
                     onIncrement={this.handleIncrement}
                     onDecrement={this.handleDecrement}>
                     <button className="btn btn-primary">Buy Now</button>
-                    </Product>;
-                    
+                    </Product>
+                );
                 })}
             </div>
         </div>
@@ -34,7 +34,11 @@ export default class ShoppingCart extends Component {
         
     }
 
-    handleIncrement = () => {};
+    handleIncrement = () => {
+        console.log("handleIncrement");
+    };
 
-    handleDecrement = () => {};
+    handleDecrement = () => {
+        console.log("handleDecrement");
+    };
 }
