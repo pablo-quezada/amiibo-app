@@ -92,7 +92,7 @@ extends Component {
       }
 
       getCustomerRow = () => {
-          return this.state.customers.map((cust)=> {
+          return this.state.customers.map((cust, index)=> {
             return(
                 <tr key={cust.id}>
                     <td>{cust.id}</td>
@@ -100,7 +100,7 @@ extends Component {
                         <img src={cust.photo} alt="Customer"/>
                         <div>
                             <button className="btn btn-sm btn-secondary" onClick={() => 
-                            {this.onChangePictureClick(cust);}}
+                            {this.onChangePictureClick(cust, index);}}
                             >Change Picture</button>
                         </div>
                     </td>
@@ -112,8 +112,14 @@ extends Component {
         });    
     };
 
-    onChangePictureClick = (cust) => {
-        console.log(cust);
+    onChangePictureClick = (cust, index) => {
+        //console.log(cust);
+        //console.log(index);
+
+        var custArr = this.state.customers;
+        custArr[index].photo = "https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_19960000-023d0002.png";
+
+        this.setState({customers: custArr});
     };
 }
     
