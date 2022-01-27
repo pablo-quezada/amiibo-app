@@ -21,7 +21,7 @@ export default class ShoppingCart extends Component {
 
             <div>
                 {this.state.products.map((prod) => {
-                    return<Product key={prod.id}/>;
+                    return<Product key={prod.id} id={prod.id}/>;
                 })}
             </div>
         </div>
