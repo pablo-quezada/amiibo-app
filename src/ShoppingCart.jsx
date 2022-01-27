@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Product from "./Product";
 
 export default class ShoppingCart extends Component {
     state = {
@@ -18,7 +19,11 @@ export default class ShoppingCart extends Component {
             <div>
             <h4>Shopping Cart</h4>
 
-            <div></div>
+            <div>
+                {this.state.products.map((prod) => {
+                    return<Product key={prod.id}/>;
+                })}
+            </div>
         </div>
         );
         
