@@ -112,13 +112,18 @@ extends Component {
         });    
     };
 
+
+    //Executes when the user clicks on "Change Picture" button in the grid
+    //Receives the "customer" object and index of the currently clicked customer
     onChangePictureClick = (cust, index) => {
         //console.log(cust);
         //console.log(index);
 
+
+        //get existing customers
         var custArr = this.state.customers;
         custArr[index].photo = "https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_19960000-023d0002.png";
-
+        //update "customers" array in the state
         this.setState({customers: custArr});
     };
 }
