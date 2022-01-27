@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import MainContent from "./MainContent";
+import CustomerList from "./CustomerList";
 import NavBar from "./NavBar";
 
 export default class App extends
@@ -9,7 +9,7 @@ Component
     {
         return (<React.Fragment>
                     <NavBar/>
-                    <MainContent/>
+                    <CustomerList/>
                </React.Fragment>
                );
     }
