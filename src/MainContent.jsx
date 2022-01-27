@@ -37,6 +37,7 @@ extends Component {
             name: "Donkey-kong", 
             phone: "8918374", 
             address: {city: "La Serena"},
+            photo: "https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_1f400000-035e1002.png"
         },
     ],
 
@@ -60,6 +61,7 @@ extends Component {
                         <thead>
                             <tr>
                             <th>#</th>
+                            <th>Photo</th>
                             <th>Customer Name</th>
                             <th>Phone</th>
                             <td>City</td>
