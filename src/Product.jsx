@@ -15,13 +15,19 @@ export default class Product extends Component {
         return (
             <div className="col-lg-6">
                   <div className="card m-2">
-                <div className="card-body">
-                        <div className="text-muted"> # {this.state.product.id}</div>
 
-                            <h5 className="p-2 border-top">{this.sate.product.productName}</h5>
+                <div className="card-body">
+                        <div className="text-muted"> # {this.props.product.id}</div>
+
+                            <h5 className="p-2 border-top">
+                                {this.props.product.productName}
+                            </h5>
 
                         <div>${this.state.product.price}</div>
                     </div>
+                    {/*card body ends here */}
+
+                    <div className="card-footer text-right">{this.props.children}</div>
                 </div>
             </div>
           
