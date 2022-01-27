@@ -24,11 +24,24 @@ export default class Product extends Component {
                             </h5>
 
                         <div>${this.state.product.price}</div>
-                    </div>
+                        </div>
                     {/*card body ends here */}
 
-                    <div className="card-footer text-right">{this.props.children}</div>
-                </div>
+                    <div className="card-footer">
+
+                        <div className="float-left">
+                            <span className="badge">{this.props.product.quantity}</span>
+                            
+                            <div className="btn-group">
+                                <button className="btn btn-outline-success">+</button>
+                                <button className="btn btn-outline-success">-</button>
+                            </div>
+                        </div>
+
+
+                        <div className="float-right">{this.props.children}</div>
+                        </div>
+                    </div>
             </div>
           
 
