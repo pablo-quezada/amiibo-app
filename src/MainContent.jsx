@@ -43,12 +43,6 @@ extends Component {
 
 };
 
-customerNameStyle = (custName) => {
-    if(custName.startsWith("M")) return "green-hightlight border-left";
-    else if(custName.startsWith("Z")) return "red-hightlight border-right";
-    else return "";
-};
-
     render() {
         return ( <div>
                     <h4 className="m-2 p-2">
@@ -104,14 +98,23 @@ customerNameStyle = (custName) => {
                     <td>{cust.id}</td>
                     <td>
                         <img src={cust.photo} alt="Customer"/>
+                        <div>
+                            <button className="btn btn-sm btn-secondary" onClick={() => 
+                            {this.onChangePictureClick(cust);}}
+                            >Change Picture</button>
+                        </div>
                     </td>
-                    <td style={this.customerNameStyle(cust.name)}>{cust.name}</td>
+                    <td>{cust.name}</td>
                     <td>{this.getPhoneToRender(cust.phone)}</td>
                     <td>{cust.address.city}</td>
                 </tr>
             );
         });    
-    }
+    };
+
+    onChangePictureClick = (cust) => {
+        console.log(cust);
+    };
 }
     
 
