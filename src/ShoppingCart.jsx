@@ -49,7 +49,7 @@ export default class ShoppingCart extends Component {
         let allProducts = [...this.state.products];
         let index = allProducts.indexOf(product);
 
-        if(allProducts[index].quantity >= minValue){
+        if(allProducts[index].quantity > minValue){
             allProducts[index].quantity--;
 
         }
