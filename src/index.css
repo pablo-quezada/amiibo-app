@@ -7,3 +7,13 @@
 {
     background-color: #0c8351 !important;
 }
+
+.green-hightlight {
+    color: green;
+    font-size: 40px;
+}
+
+.red-hightlight {
+    color: red;
+    font-size: 25px;
+}
