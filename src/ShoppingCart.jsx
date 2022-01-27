@@ -38,7 +38,7 @@ export default class ShoppingCart extends Component {
         console.log("handleIncrement", product);
     };
 
-    handleDecrement = () => {
-        console.log("handleDecrement");
+    handleDecrement = (product) => {
+        console.log("handleDecrement", product);
     };
 }
