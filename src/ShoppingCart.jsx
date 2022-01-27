@@ -36,7 +36,7 @@ export default class ShoppingCart extends Component {
 
     handleIncrement = (product) => {
         let allProducts = [...this.state.products];
-        let index = allProducts.indexOff(product);
+        let index = allProducts.indexOf(product);
         allProducts[index].quantity++;
 
         this.setState({ products: allProducts });
@@ -44,6 +44,11 @@ export default class ShoppingCart extends Component {
     };
 
     handleDecrement = (product) => {
-        console.log("handleDecrement", product);
+        let allProducts = [...this.state.products];
+        let index = allProducts.indexOf(product);
+        allProducts[index].quantity--;
+
+        this.setState({ products: allProducts });
+        
     };
 }
