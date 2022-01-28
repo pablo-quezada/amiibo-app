@@ -1,6 +1,11 @@
 import React, {Component} from "react";
 
 export default class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { email: "", password: "" };
+    }
+    
     render () {
         return (<div className="col-lg-9">
             <h4 className="m-1 p-2 border-bottom">Login</h4>
