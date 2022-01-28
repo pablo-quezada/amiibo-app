@@ -3,8 +3,8 @@ import Product from "./Product";
 
 export default class ShoppingCart extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             products: [
                 {id:1, productName: "Mario", price: 8900, quantity: 0},
