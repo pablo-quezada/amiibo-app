@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CustomerList from "./CustomerList";
+import Login from "./Login";
 import NavBar from "./NavBar";
 import ShoppingCart from "./ShoppingCart";
 
@@ -10,6 +11,7 @@ Component
     {
         return (<React.Fragment>
                     <NavBar/>
+                    <Login></Login>
                     <ShoppingCart x="10"/>
                </React.Fragment>
                );
