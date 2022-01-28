@@ -52,7 +52,14 @@ export default class ShoppingCart extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log("componentDidUpdate", prevProps, prevState, this.props, this.state);
+        console.log("componentDidUpdate - ShoppingCart", prevProps, prevState, this.props, this.state);
+        //if (prevProps.x != this.props.x) {
+       // }
+    }
+
+    componentWillUnmount() {
+        console.log("componentWillUnmount - ShoppingCart");
+
     }
 
     handleIncrement = (product, maxValue) => {
