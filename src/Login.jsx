@@ -31,4 +31,8 @@ export default class Login extends Component {
         </div>
         );
     }
+
+    onLoginClick = () => {
+        console.log(this.state);
+    };
 }
