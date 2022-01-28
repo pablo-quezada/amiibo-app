@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CustomerList from "./CustomerList";
 import NavBar from "./NavBar";
 import ShoppingCart from "./ShoppingCart";
 

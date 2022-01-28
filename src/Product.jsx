@@ -17,10 +17,16 @@ export default class Product extends Component {
                   <div className="card m-2">
 
                 <div className="card-body">
-                        <div className="text-muted"> # {this.props.product.id}</div>
+                        <div className="text-muted"> 
+                        # {this.state.product.id}
+
+                        <span className="pull-right">
+                            <i className="fa fa-times"></i>
+                        </span>
+                        </div>
 
                             <h5 className="p-2 border-top">
-                                {this.props.product.productName}
+                                {this.state.product.productName}
                             </h5>
 
                         <div>${this.state.product.price}</div>
@@ -28,9 +34,8 @@ export default class Product extends Component {
                     {/*card body ends here */}
 
                     <div className="card-footer">
-
                         <div className="float-left">
-                            <span className="badge">{this.props.product.quantity}</span>
+                            <span className="badge bg">{this.state.product.quantity}</span>
                             
                             <div className="btn-group">
                                 <button className="btn btn-outline-success" onClick={() => {this.props.onIncrement(this.state.product, 10);}}>+</button>
