@@ -20,7 +20,9 @@ export default class Product extends Component {
                         <div className="text-muted"> 
                         # {this.state.product.id}
 
-                        <span className="pull-right hand-icon">
+                        <span className="pull-right hand-icon" onClick={() => {
+                            this.props.onDelete(this.state.product);
+                        }}>
                             <i className="fa fa-times"></i>
                         </span>
                         </div>
