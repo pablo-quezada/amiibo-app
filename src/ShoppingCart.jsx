@@ -62,6 +62,13 @@ export default class ShoppingCart extends Component {
 
     }
 
+    componentDidCatch(error, info) {
+        console.log("componentDidCatch - ShoppingCart");
+        console.log(error, info);
+
+        localStorage.lastError = `${error}\n${JSON.stringify(info)}`;
+    }
+
     handleIncrement = (product, maxValue) => {
         let allProducts = [...this.state.products];
         let index = allProducts.indexOf(product);
