@@ -9,6 +9,11 @@ export default class Login extends Component {
                 <label className="col-lg-4">Email:</label>
                 <input type="text" className="form-control" />
             </div>
+
+            <div className="form-group form-row">
+                <label className="col-lg-4">Password:</label>
+                <input type="password" className="form-control" />
+            </div>
         </div>
         );
     }
