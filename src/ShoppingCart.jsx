@@ -4,6 +4,7 @@ import Product from "./Product";
 export default class ShoppingCart extends Component {
 
     constructor(props) {
+        console.log("constructor - ShoppingCart");
         super(props);
         this.state = {
             products: [
@@ -22,6 +23,8 @@ export default class ShoppingCart extends Component {
 
 
     render () {
+        console.log("render - ShoppingCart");
+
         return (
             <div className="container-fluid">
             <h4>Shopping Cart</h4>
@@ -39,8 +42,13 @@ export default class ShoppingCart extends Component {
                 })}
             </div>
         </div>
-        );
-        
+        );       
+    }
+
+
+    componentDidMount() {
+        console.log("componentDidMount - ShoppingCart");
+
     }
 
     handleIncrement = (product, maxValue) => {
