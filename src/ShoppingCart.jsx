@@ -63,9 +63,11 @@ export default class ShoppingCart extends Component {
         let allProducts = [...this.state.products];
         let index = allProducts.indexOf(product);
 
-        allProducts.splice(index, 1);
+        if (window.confirm("Are you sure to delete?")) {
+            allProducts.splice(index, 1);
 
-        this.setState({ products: allProducts });
+            this.setState({ products: allProducts });
 
+        }
     };
 }
