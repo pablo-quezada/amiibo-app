@@ -23,8 +23,9 @@ export default class ShoppingCart extends Component {
                 {this.state.products.map((prod) => {
                     return ( <Product key={prod.id} product={prod} 
                     onIncrement={this.handleIncrement}
-                    onDecrement={this.handleDecrement}>
-                        
+                    onDecrement={this.handleDecrement}
+                    onDelete={this.handleDelete}>
+
                     <button className="btn btn-primary">Buy Now</button>
                     </Product>
                 );
