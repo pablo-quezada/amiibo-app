@@ -22,6 +22,12 @@ export default class Login extends Component {
                 <label className="col-lg-4">Password:</label>
                 <input type="password" className="form-control" value={this.state.password} />
             </div>
+
+            <div>
+                <button className="btn btn-primary" onClick={this.onLoginClick}>
+                    Login
+                </button>
+            </div>
         </div>
         );
     }
