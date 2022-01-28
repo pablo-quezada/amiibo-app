@@ -3,7 +3,7 @@ import React, {Component} from "react";
 export default class Login extends Component {
     constructor(props) {
         super(props);
-        this.state = { email: "", password: "" };
+        this.state = { email: "prueba@test.com", password: "abc345" };
     }
 
     render () {
@@ -12,7 +12,10 @@ export default class Login extends Component {
 
             <div className="form-group form-row">
                 <label className="col-lg-4">Email:</label>
-                <input type="text" className="form-control" value={this.state.email}/>
+                <input type="text" className="form-control" value={this.state.email}
+                onChange={(event) => {
+                    this.setState( {email: event.target.value});
+                }}/>
             </div>
 
             <div className="form-group form-row">
