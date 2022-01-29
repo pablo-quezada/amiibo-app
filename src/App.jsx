@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Dashboard from "./Dashboard";
 //import CustomerList from "./CustomerList";
 import Login from "./Login";
 import NavBar from "./NavBar";
@@ -12,7 +13,7 @@ Component
     {
         return (<React.Fragment>
                     <NavBar/>
-                    <Login></Login>
+                    <Dashboard></Dashboard>
                </React.Fragment>
                );
     }
