@@ -6,6 +6,8 @@ import NavBar from "./NavBar";
 import ShoppingCart from "./ShoppingCart";
 import { Route } from "react-router";
 import { BrowserRouter } from "react-router-dom";
+import NoMatchPage from "./NoMatchPage";
+
 
 export default class App extends
 Component
@@ -18,6 +20,7 @@ Component
                     <Route path="/dashboard" exact component={Dashboard}/>
                     <Route path="/customers" exact component={CustomerList}/>
                     <Route path="/cart" exact component={ShoppingCart}/>
+                    <Route path="*" component={NoMatchPage}/>
                </BrowserRouter>
                );
     }
