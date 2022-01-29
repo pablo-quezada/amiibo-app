@@ -9,13 +9,17 @@ import { BrowserRouter } from "react-router-dom";
 import NoMatchPage from "./NoMatchPage";
 
 
-export default class App extends
-Component
+export default class App extends Component
 {
+    constructor(props) {
+        super(props);
+        this.state = {isLoggedIn: false};
+    }
+
     render()
     {
         return (<BrowserRouter>
-                    <NavBar/>
+                    <NavBar isLoggedIn={this.state.isLoggedIn}/>
                     <div className="container-fluid">
                     <Switch>
                         <Route path="/" exact component={Login}/>
