@@ -32,5 +32,9 @@ export default class App extends Component
                </BrowserRouter>
                );
     }
+   
     
+    updateIsLoggedInStatus = (status) => {
+        this.setState({isLoggedIn: status});
+    };
 }
