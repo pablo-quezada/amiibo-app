@@ -22,7 +22,8 @@ export default class App extends Component
                     <NavBar isLoggedIn={this.state.isLoggedIn}/>
                     <div className="container-fluid">
                     <Switch>
-                        <Route path="/" exact component={Login}/>
+                        <Route path="/" exact render={(props) => <Login {...props}
+                        updateIsLoggedInStatus={this.updateIsLoggedInStatus}/>} />
                         <Route path="/dashboard" exact component={Dashboard}/>
                         <Route path="/customers" exact component={CustomerList}/>
                         <Route path="/cart" exact component={ShoppingCart}/>
