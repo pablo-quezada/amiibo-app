@@ -13,22 +13,36 @@ class NavBar extends Component {
                         </button>
 
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">    
-                                <li className="nav-item">
-                                <NavLink to="/" className="nav-link" activeClassName="active" exact={true}>Login</NavLink>
-                                </li>
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
+                                {!this.props.isLoggedIn ? (<li className="nav-item">
+                                <NavLink to="/" className="nav-link" activeClassName="active" exact={true}>Login</NavLink>
+                                </li>):(""
+                                )}
+
+                                {this.props.isLoggedIn ?(
                                 <li className="nav-item">    
                                 <NavLink to="/dashboard" className="nav-link" activeClassName="active">Dashboard</NavLink>
                                 </li>
+                                ):(
+                                 ""   
+                                )}
 
+                                {this.props.isLoggedIn ?(
                                 <li className="nav-item">
                                 <NavLink to="/customers" className="nav-link" activeClassName="active">Customers</NavLink>
                                 </li>
+                                ):(
+                                 ""   
+                                )}
 
+                                {this.props.isLoggedIn ?(
                                 <li className="nav-item">
                                 <NavLink to="/cart" className="nav-link" activeClassName="active">ShoppingCart</NavLink>
-                                </li>   
+                                </li>
+                                 ):(
+                                 ""   
+                                )}   
                             </ul>   
                         </div>
                     </div>
