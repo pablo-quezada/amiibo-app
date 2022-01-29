@@ -46,6 +46,8 @@ export default class Login extends Component {
             this.setState({
             message: <span className="text-success">"Successfully Logged-in"</span>
         });
+
+        this.props.updateIsLoggedInStatus(true);
         }else{
             this.setState({
             message: <span className="text-danger">"Invalid login, please try again"</span>
