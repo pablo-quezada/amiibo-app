@@ -28,8 +28,8 @@ export default class Login extends Component {
 
             <div className="text-right">
                 {this.state.message}
-
-                <button className="btn btn-primary m-1" onClick={this.onLoginClick}>
+                
+                <button className="btn btn-primary" onClick={this.onLoginClick}>
                     Login
                 </button>
             </div>

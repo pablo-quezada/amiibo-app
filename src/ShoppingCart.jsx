@@ -40,16 +40,16 @@ export default class ShoppingCart extends Component {
 
 
     componentDidMount() {
-        var promise = fetch("https://www.amiiboapi.com/api/amiibo/products", {method: "GET"});
+        var promise = fetch("http://localhost:5000/products", {method: "GET"});
         promise.then((response) => {
             console.log(response);
 
-            var promise2 = response.json();
-            promise2.then((prods) => {
-                console.log(products);
+         var promise2 = response.json();
+           promise2.then((prods) => {
+            console.log(prods);
 
-                this.setState({products: products});
-            });
+            this.setState({products: prods});
+          });
         });
         //console.log("componentDidMount - ShoppingCart");
 
