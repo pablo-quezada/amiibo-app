@@ -16,6 +16,7 @@ Component
     {
         return (<BrowserRouter>
                     <NavBar/>
+                    <div className="container-fluid">
                     <Switch>
                         <Route path="/" exact component={Login}/>
                         <Route path="/dashboard" exact component={Dashboard}/>
@@ -23,6 +24,7 @@ Component
                         <Route path="/cart" exact component={ShoppingCart}/>
                         <Route path="*" component={NoMatchPage}/>
                     </Switch>
+                    </div>
                </BrowserRouter>
                );
     }
