@@ -3,7 +3,7 @@ import React, {Component} from "react";
 export default class Login extends Component {
     constructor(props) {
         super(props);
-        this.state = { email: "prueba@test.com", password: "abc345" };
+        this.state = { email: "", password: "", message: "" };
     }
 
     render () {
@@ -26,7 +26,7 @@ export default class Login extends Component {
                 }} />
             </div>
 
-            <div>
+            <div className="text-right">
                 <button className="btn btn-primary" onClick={this.onLoginClick}>
                     Login
                 </button>
@@ -37,5 +37,18 @@ export default class Login extends Component {
 
     onLoginClick = () => {
         console.log(this.state);
+        if (
+            this.state.email === "admin@test.com" && 
+            this.state.password === "admin123"
+        ){
+            this.setState({
+            message: <span className="text-success">"Successfully Logged-in"</span>
+        });
+        }else{
+            this.setState({
+            message: <span className="text-danger">"Invalid login, please try again"</span>
+        });
+
+        }
     };
 }
