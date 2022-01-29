@@ -7,14 +7,7 @@ export default class ShoppingCart extends Component {
         console.log("constructor - ShoppingCart");
         super(props);
         this.state = {
-            products: [
-                {id:1, productName: "Mario", price: 8900, quantity: 0},
-                {id:2, productName: "Zelda", price: 7300, quantity: 0},
-                {id:3, productName: "Chibi", price: 3000, quantity: 0},
-                {id:4, productName: "Robo", price: 5500, quantity: 0},
-                {id:5, productName: "Mewtoo", price: 9900, quantity: 0},
-                {id:6, productName: "Yoshi", price: 8600, quantity: 0},
-            ],
+            products: [],
         };
     }
 
@@ -47,14 +40,24 @@ export default class ShoppingCart extends Component {
 
 
     componentDidMount() {
-        console.log("componentDidMount - ShoppingCart");
+        var promise = fetch("https://www.amiiboapi.com/api/amiibo/products", {method: "GET"});
+        promise.then((response) => {
+            console.log(response);
+
+            var promise2 = response.json();
+            promise2.then((prods) => {
+                console.log(products);
+
+                this.setState({products: products});
+            });
+        });
+        //console.log("componentDidMount - ShoppingCart");
 
     }
 
     componentDidUpdate(prevProps, prevState) {
         console.log("componentDidUpdate - ShoppingCart", prevProps, prevState, this.props, this.state);
-        //if (prevProps.x != this.props.x) {
-       // }
+       
     }
 
     componentWillUnmount() {
