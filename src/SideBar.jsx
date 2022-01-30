@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { NavLink } from "react-router-dom";
 
 export default class SideBar extends Component {
     render() {
@@ -7,7 +8,14 @@ export default class SideBar extends Component {
                 <h4 className="p-1 border-bottom">Sidebar</h4>
 
                 <div className="list-group mt-2">
-                    <a href="#"/>
+                    <NavLink to="/dashboard" className="list-group-item 
+                    list-group-item-action">Dashboard</NavLink>
+
+                    <NavLink to="/products" className="list-group-item 
+                    list-group-item-action">Customers</NavLink>
+
+                    <NavLink to="/cart" className="list-group-item 
+                    list-group-item-action">Shopping Cart</NavLink>
                 </div>
             </div>
         );
