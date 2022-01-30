@@ -27,8 +27,10 @@ export default class App extends Component
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-lg-3">
-                                <SideBar></SideBar>
+                                {this.state.isLoggedIn? <SideBar></SideBar> :""}
+                                
                             </div>
+
                             <div className="col-lg-9">
                             <Switch>
                                 <Route path="/" exact render={(props) => <Login {...props}
