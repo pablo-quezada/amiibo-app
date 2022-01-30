@@ -24,14 +24,19 @@ export default class App extends Component
                     {this.updateIsLoggedInStatus}
                     />
                     <div className="container-fluid">
-                    <Switch>
-                        <Route path="/" exact render={(props) => <Login {...props}
-                        updateIsLoggedInStatus={this.updateIsLoggedInStatus}/>} />
-                        <Route path="/dashboard" exact component={Dashboard}/>
-                        <Route path="/customers" exact component={CustomerList}/>
-                        <Route path="/cart" exact component={ShoppingCart}/>
-                        <Route path="*" component={NoMatchPage}/>
-                    </Switch>
+                        <div className="row">
+                            <div className="col-lg-3"></div>
+                            <div className="col-lg-9">
+                            <Switch>
+                                <Route path="/" exact render={(props) => <Login {...props}
+                                updateIsLoggedInStatus={this.updateIsLoggedInStatus}/>} />
+                                <Route path="/dashboard" exact component={Dashboard}/>
+                                <Route path="/customers" exact component={CustomerList}/>
+                                <Route path="/cart" exact component={ShoppingCart}/>
+                                <Route path="*" component={NoMatchPage}/>
+                            </Switch>
+                            </div>
+                        </div>
                     </div>
                </Router>
                );
