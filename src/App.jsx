@@ -8,6 +8,7 @@ import { Route, Switch } from "react-router";
 import { Router } from "react-router-dom";
 import NoMatchPage from "./NoMatchPage";
 import history from "./history";
+import SideBar from "./SideBar";
 
 
 export default class App extends Component
@@ -25,7 +26,9 @@ export default class App extends Component
                     />
                     <div className="container-fluid">
                         <div className="row">
-                            <div className="col-lg-3"></div>
+                            <div className="col-lg-3">
+                                <SideBar></SideBar>
+                            </div>
                             <div className="col-lg-9">
                             <Switch>
                                 <Route path="/" exact render={(props) => <Login {...props}
