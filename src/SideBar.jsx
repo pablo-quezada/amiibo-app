@@ -9,13 +9,13 @@ export default class SideBar extends Component {
 
                 <div className="list-group mt-2">
                     <NavLink to="/dashboard" className="list-group-item 
-                    list-group-item-action">Dashboard</NavLink>
+                    list-group-item-action" activeClassName="active">Dashboard</NavLink>
 
                     <NavLink to="/products" className="list-group-item 
-                    list-group-item-action">Customers</NavLink>
+                    list-group-item-action" activeClassName="active">Customers</NavLink>
 
                     <NavLink to="/cart" className="list-group-item 
-                    list-group-item-action">Shopping Cart</NavLink>
+                    list-group-item-action" activeClassName="active">Shopping Cart</NavLink>
                 </div>
             </div>
         );
