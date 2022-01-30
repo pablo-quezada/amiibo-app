@@ -11,7 +11,7 @@ export default class SideBar extends Component {
                     <NavLink to="/dashboard" className="list-group-item 
                     list-group-item-action" activeClassName="active">Dashboard</NavLink>
 
-                    <NavLink to="/products" className="list-group-item 
+                    <NavLink to="/customers" className="list-group-item 
                     list-group-item-action" activeClassName="active">Customers</NavLink>
 
                     <NavLink to="/cart" className="list-group-item 
