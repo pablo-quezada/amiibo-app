@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { NavLink } from "react-router-dom";
+import history from "./history";
 
 class NavBar extends Component {
     render() {
@@ -61,6 +62,11 @@ class NavBar extends Component {
 
     onLogoutClick = (event) => {
         event.preventDefault();
+        this.props.updateIsLoggedInStatus(false);
+
+        history.replace("/");
+
+
     
     };
 };
