@@ -31,7 +31,7 @@ export default class App extends Component
                                 
                             </div>
 
-                            <div className="col-lg-9">
+                            <div className="col-lg-3">
                             <Switch>
                                 <Route path="/" exact render={(props) => <Login {...props}
                                 updateIsLoggedInStatus={this.updateIsLoggedInStatus}/>} />
