@@ -7,6 +7,7 @@ import ShoppingCart from "./ShoppingCart";
 import { Route, Switch } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import NoMatchPage from "./NoMatchPage";
+import history from "history.js";
 
 
 export default class App extends Component
@@ -18,7 +19,7 @@ export default class App extends Component
 
     render()
     {
-        return (<BrowserRouter>
+        return (<Router history={history}>
                     <NavBar isLoggedIn={this.state.isLoggedIn}/>
                     <div className="container-fluid">
                     <Switch>
@@ -30,7 +31,7 @@ export default class App extends Component
                         <Route path="*" component={NoMatchPage}/>
                     </Switch>
                     </div>
-               </BrowserRouter>
+               </Router>
                );
     }
    
