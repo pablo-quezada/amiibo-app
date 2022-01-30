@@ -5,9 +5,9 @@ import Login from "./Login";
 import NavBar from "./NavBar";
 import ShoppingCart from "./ShoppingCart";
 import { Route, Switch } from "react-router";
-import { BrowserRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
 import NoMatchPage from "./NoMatchPage";
-import history from "history.js";
+import history from "./history";
 
 
 export default class App extends Component
