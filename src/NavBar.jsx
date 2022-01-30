@@ -42,7 +42,15 @@ class NavBar extends Component {
                                 </li>
                                  ):(
                                  ""   
-                                )}   
+                                )}
+
+                                {this.props.isLoggedIn ?(
+                                <li className="nav-item">
+                                <a href="/#" className="nav-link" onClick={this.onLogoutClick}>Log out</a>
+                                </li>
+                                 ):(
+                                 ""   
+                                )}      
                             </ul>   
                         </div>
                     </div>
@@ -50,6 +58,13 @@ class NavBar extends Component {
            </React.Fragment>                
         );
     };
+
+    onLogoutClick = (event) => {
+        event.preventDefault();
+    
+    };
 };
+
+
 
 export default NavBar;
