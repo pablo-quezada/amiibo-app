@@ -8,8 +8,10 @@ export default class Login extends Component {
     }
 
     render () {
-        return (<div>
-            <h4 className="m-1 p-2 border-bottom">Login</h4>
+        return (
+    <div className="row">
+        <div className="col-lg-6 mx-auto">
+            <h4 className="my-1 py-2 border-bottom">Login</h4>
 
             <div className="form-group form-row">
                 <label className="col-lg-4">Email:</label>
@@ -35,6 +37,7 @@ export default class Login extends Component {
                 </button>
             </div>
         </div>
+    </div>
         );
     }
 
