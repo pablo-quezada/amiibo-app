@@ -49,7 +49,6 @@ export default class ProductByID extends Component {
 
 
                         <div className="float-right">
-                            <Link/>
                             {this.props.children}</div>
                         </div>
                     </div> 
