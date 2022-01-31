@@ -17,7 +17,7 @@ export default class ProductByID extends Component {
     render (){
         return (
             <div className="row">
-            <div className="col-lg-6">
+            <div className="col-lg-6 mx-auto">
                   <div className="card m-2">
 
                 <div className="card-body">
@@ -51,7 +51,7 @@ export default class ProductByID extends Component {
 
 
                         <div className="float-right">
-                            <Link to="/products" className="btn btn-secondary">Back...</Link>
+                            <Link to="/cart" className="btn btn-secondary">Back...</Link>
                             {this.props.children}</div>
                         </div>
                     </div> 
@@ -79,5 +79,12 @@ export default class ProductByID extends Component {
         {
             this.setState({product: body});
         }
+    }
+    componentDidUpdate() {
+        console.log("componentDidUpdate - Product");
+    }
+
+    componentWillUnmount() {
+        console.log("componentWillUnmount - Product");
     }
 }
