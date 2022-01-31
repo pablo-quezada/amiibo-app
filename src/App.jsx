@@ -9,6 +9,7 @@ import { Router } from "react-router-dom";
 import NoMatchPage from "./NoMatchPage";
 import history from "./history";
 import SideBar from "./SideBar";
+import ProductByID from "./ProductByID";
 
 
 export default class App extends Component
@@ -38,6 +39,7 @@ export default class App extends Component
                                 <Route path="/dashboard" exact component={Dashboard}/>
                                 <Route path="/customers" exact component={CustomerList}/>
                                 <Route path="/cart" exact component={ShoppingCart}/>
+                                <Route path="/product/:id" component={ProductByID}/>
                                 <Route path="*" component={NoMatchPage}/>
                             </Switch>
                             </div>

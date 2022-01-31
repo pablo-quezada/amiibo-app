@@ -57,7 +57,7 @@ export default class Product extends Component {
                             <Link to={`product/${this.state.product.id}`}
                             className="mr-2">
                                 Details
-                            </Link>/>
+                            </Link>
                             {this.props.children}</div>
                         </div>
                     </div> 
