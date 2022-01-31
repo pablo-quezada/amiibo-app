@@ -62,7 +62,18 @@ export default class ProductByID extends Component {
 
 
 
-    componenDidMount() {
-        console.log(this.props.match.params);
+    componenDidMount = async  () => {
+        var id = this.props.match.params.id;
+
+        var response = await fetch(`http://localhost:5000/products/${id}`,
+        {method: "GET"});
+
+        var body = await response.json();
+        console.log(body);
+
+        if (body.length > 0)
+        {
+            this.setState({product: body});
+        }
     }
 }
