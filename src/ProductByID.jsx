@@ -15,6 +15,7 @@ export default class ProductByID extends Component {
 
     render (){
         return (
+            <div className="row">
             <div className="col-lg-6">
                   <div className="card m-2">
 
@@ -49,9 +50,11 @@ export default class ProductByID extends Component {
 
 
                         <div className="float-right">
+                            <Link to="/products" className="btn btn-secondary">Back...</Link>
                             {this.props.children}</div>
                         </div>
                     </div> 
+             </div>
              </div>
             
           
