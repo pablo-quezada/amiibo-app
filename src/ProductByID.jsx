@@ -63,6 +63,6 @@ export default class ProductByID extends Component {
 
 
     componenDidMount() {
-        console.log("componentDidMount - Product");
+        console.log(this.props.match.params);
     }
 }
