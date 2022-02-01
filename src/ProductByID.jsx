@@ -67,6 +67,7 @@ export default class ProductByID extends Component {
 
 
     componenDidMount = async  () => {
+        document.title = `${this.state.product.productName} - AmiiboShop`;
         var id = this.props.match.params.id;
 
         var response = await fetch(`http://localhost:5000/products/${id}`,
