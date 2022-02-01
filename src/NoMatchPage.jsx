@@ -9,4 +9,9 @@ export default class NoMatchPage extends Component {
 
         );
     }
+
+
+    componentDidMount() {
+        document.title = "404 - AmiiboShop";
+    }
 }
