@@ -41,7 +41,7 @@ export default class Login extends Component {
         );
     }
 
-    componentDidmount() {
+    componentDidMount() {
         document.title = "Login - AmiiboShop";
     }
 

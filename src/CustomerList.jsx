@@ -75,7 +75,7 @@ extends Component {
                );
     }
 
-    componentDidmount() {
+    componentDidMount() {
         document.title = "Customers - AmiiboShop";
     }
 
