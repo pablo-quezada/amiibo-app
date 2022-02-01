@@ -9,4 +9,8 @@ export default class Dashboard extends Component {
 
         );
     }
+
+    componentDidmount() {
+        document.title = "Dashboard - AmiiboShop";
+    }
 }

@@ -75,6 +75,10 @@ extends Component {
                );
     }
 
+    componentDidmount() {
+        document.title = "Customers - AmiiboShop";
+    }
+
 
 
     onRefreshClick = () => {
