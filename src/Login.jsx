@@ -41,6 +41,10 @@ export default class Login extends Component {
         );
     }
 
+    componentDidmount() {
+        document.title = "Login - AmiiboShop"
+    }
+
     onLoginClick = () => {
         console.log(this.state);
         if (
