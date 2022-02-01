@@ -42,7 +42,7 @@ export default class Login extends Component {
     }
 
     componentDidmount() {
-        document.title = "Login - AmiiboShop"
+        document.title = "Login - AmiiboShop";
     }
 
     onLoginClick = () => {
