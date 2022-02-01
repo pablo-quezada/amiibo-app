@@ -4,7 +4,7 @@ import history from "./history";
 export default class Login extends Component {
     constructor(props) {
         super(props);
-        this.state = { email: "", password: "", message: "" };
+        this.state = { email: "admin@test.com", password: "admin123", message: "" };
     }
 
     render () {
