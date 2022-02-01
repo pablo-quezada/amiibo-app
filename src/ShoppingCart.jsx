@@ -47,6 +47,7 @@ export default class ShoppingCart extends Component {
 
 
     componentDidMount() {
+        document.title = "Cart - AmiiboShop"
         console.log("componentDidMount - ShoppingCart");
 
     }
