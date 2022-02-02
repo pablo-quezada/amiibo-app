@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import history from "./history";
+
 
 export default class Login extends Component {
     constructor(props) {
@@ -57,7 +57,7 @@ export default class Login extends Component {
 
         this.props.updateIsLoggedInStatus(true);
 
-        history.replace("/dashboard");
+        history.props.history.replace("/dashboard");
         }else{
             this.setState({
             message: <span className="text-danger">"Invalid login, please try again"</span>
