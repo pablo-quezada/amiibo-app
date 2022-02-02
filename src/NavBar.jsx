@@ -64,8 +64,6 @@ class NavBar extends Component {
         event.preventDefault();
         this.props.updateIsLoggedInStatus(false);
 
-        console.log(this.props.history);
-
         this.props.history.replace("/");
 
 
