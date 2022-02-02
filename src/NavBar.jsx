@@ -64,10 +64,8 @@ class NavBar extends Component {
         event.preventDefault();
         this.props.updateIsLoggedInStatus(false);
 
-        this.props.history.replace("/");
-
-
-    
+       // this.props.history.replace("/");
+       document.location.hash = "/";
     };
 };
 
