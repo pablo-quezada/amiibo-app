@@ -7,7 +7,7 @@ import ShoppingCart from "./ShoppingCart";
 import { Route, Switch } from "react-router";
 import { HashRouter } from "react-router-dom";
 import NoMatchPage from "./NoMatchPage";
-import history from "./history";
+//import history from "./history";
 import SideBar from "./SideBar";
 import ProductByID from "./ProductByID";
 
