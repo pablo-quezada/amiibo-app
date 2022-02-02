@@ -21,7 +21,7 @@ export default class App extends Component
 
     render()
     {
-        return (<HashRouter history={history}>
+        return (<HashRouter>
                     <NavBar isLoggedIn={this.state.isLoggedIn} updateIsLoggedInStatus=
                     {this.updateIsLoggedInStatus}
                     />

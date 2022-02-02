@@ -57,7 +57,7 @@ export default class Login extends Component {
 
         this.props.updateIsLoggedInStatus(true);
 
-        history.props.history.replace("/dashboard");
+       // history.props.history.replace("/dashboard");
         }else{
             this.setState({
             message: <span className="text-danger">"Invalid login, please try again"</span>
