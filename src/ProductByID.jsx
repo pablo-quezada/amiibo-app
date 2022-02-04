@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
+//import {Link} from "react-router-dom";
 
 export default class ProductByID extends Component {
     constructor(props) {
@@ -14,78 +14,76 @@ export default class ProductByID extends Component {
   
 
 
-    render (){
-        return (
-            <div className="row">
-            <div className="col-lg-6 mx-auto">
-                  <div className="card m-2">
-
-                <div className="card-body">
-                        <div className="text-muted"> 
-                        # {this.state.product.id}
-
-                        <span className="pull-right hand-icon" onClick={() => {
-                            this.props.onDelete(this.state.product);
-                        }}>
-                            <i className="fa fa-times"></i>
-                        </span>
-                        </div>
-
-                            <h5 className="p-2 border-top">
-                                {this.state.product.productName}
-                            </h5>
-
-                        <div>${this.state.product.price}</div>
-                        </div>
-                    {/*card body ends here */}
-
-                    <div className="card-footer">
-                        <div className="float-left">
-                            <span>{this.state.product.quantity}</span>
-                            
-                            <div className="btn-group">
-                                <button className="btn btn-outline-success" onClick={() => {this.props.onIncrement(this.state.product, 10);}}>+</button>
-                                <button className="btn btn-outline-success" onClick={() => {this.props.onDecrement(this.state.product, 0);}}>-</button>
-                            </div>
-                        </div>
+    
 
 
-                        <div className="float-right">
-                            <Link to="/cart" className="btn btn-secondary">Back...</Link>
-                            {this.props.children}</div>
-                        </div>
-                    </div> 
-             </div>
-             </div>
-            
-          
-
-        );
-        
-    }
-
-
-
-    componenDidMount = async  () => {
-        document.title = `${this.state.product.productName} - AmiiboShop`;
+    componentDidMount = async () => {
         var id = this.props.match.params.id;
+        console.log(id)
 
-        var response = await fetch(`http://localhost:5000/products/${id}`,
+        var response = await fetch(`https://www.amiiboapi.com/api/amiibo/`,
         {method: "GET"});
 
         var body = await response.json();
-        console.log(body);
-
-        if (body.length > 0)
-        {
-            this.setState({product: body});
-        }
+        console.log(body.amiibo);
+        this.setState({product: body.amiibo});
+        
     }
     componentDidUpdate() {
-        console.log("componentDidUpdate - Product");
+        console.log("componentDidUpdate - Product", this.state.product);
     }
 
-    componentWillUnmount() {
-        console.log("componentWillUnmount - Product");
-    }
+
+    render (){
+         
+            
+        if (this.state.product) {
+            return (
+                <div>
+                    <h1>{this.state.product.name}</h1>,
+                    <h1>{this.state.product.image}</h1>
+                    <li>
+                        <img src="https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00000000-00000002.png"/>
+                    </li>
+
+                    <li>
+                        <img src="https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00000000-003c0102.png"/>
+                    </li>
+                    <li>
+                        <img src="https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00000003-039bff02.png"/>
+                    </li>
+                    <li>
+                        <img src="https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00030102-00410302.png"/>
+                    </li>
+                    <li>
+                        <img src="https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00040000-02620102.png"/>
+                    </li>
+                    <li>
+                        <img src="https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00050000-00140002.png"/>
+                    </li>
+                    <li>
+                        <img src="https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_0005ff00-023a0702.png"/>
+                    </li>
+                    <li>
+                        <img src="https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00800102-035d0302.png"/>
+                    </li>
+                    <li>
+                        <img src="https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_01000000-03990902.png"/>
+                    </li>
+                </div>
+                
+            )
+
+        }
+        return (<h1>cargando</h1>)
+    
+
+   
+    
+  
+
+
+
+}
+
 }

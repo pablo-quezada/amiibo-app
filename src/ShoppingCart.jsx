@@ -21,7 +21,6 @@ export default class ShoppingCart extends Component {
 
   
 
-
     render () {
         console.log("render - ShoppingCart");
 
@@ -101,5 +100,7 @@ export default class ShoppingCart extends Component {
             this.setState({ products: allProducts });
 
         }
+
+     
     };
 }
