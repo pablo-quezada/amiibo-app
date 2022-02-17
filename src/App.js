@@ -10,6 +10,9 @@ import NoMatchPage from "./NoMatchPage";
 //import history from "./history";
 import SideBar from "./SideBar";
 import ProductByID from "./ProductByID";
+import Amiibo from "./components/Amiibo";
+import { Provider } from "react-redux";
+import generateStore from './redux/store'
 
 
 export default class App extends Component
@@ -21,10 +24,15 @@ export default class App extends Component
 
     render()
     {
+        const store = generateStore()
         return (<HashRouter>
                     <NavBar isLoggedIn={this.state.isLoggedIn} updateIsLoggedInStatus=
                     {this.updateIsLoggedInStatus}
                     />
+                    <Provider store={store}>
+                        <Amiibo/>
+                    </Provider>
+                   
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-lg-3">
